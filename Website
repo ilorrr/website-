@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rolando Molina Jr. — Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Times New Roman', sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+      background: #fffafc;
+      border: 2px solid #ffe5f0;
+      border-radius: 10px;
+    }
+    h1 { color: #000080; }
+    .profile {
+      width: 120px; height: 120px;
+      background-image: url('https://via.placeholder.com/120');
+      background-size: cover;
+      border-radius: 8px;
+      border: 3px solid #000080;
+    }
+    .special {
+      background: #ffeef8;
+      border-left: 6px solid #000080;
+      padding: 12px 16px;
+      border-radius: 6px;
+    }
+    a { color: #000080; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="profile"></div>
+    <h1>Rolando Molina Jr.</h1>
+    <p>CE Student & Researcher</p>
+  </div>
+
+  <section>
+    <h2>About</h2>
+    <p>A computer engineering undergraduate with a pursuit in the technology field with a firm basis in academic record as a university and transfer student with practical experience with programming and hardware aspects. I'm seeking an internship, entry-level position, or full-time role where I could leverage my engineering learning experience and grow upon it.</p>
+    <p><strong>Languages:</strong> English,Spanish</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul><li>C++</li>
+<li>Python</li>
+<li>HTML</li>
+<li>AI</li>
+<li>Machine learning</li>
+<li>AGILE</li>
+<li>Electrical Soldering</li>
+<li>OrCad PSpice</li></ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul><li><strong>CMOS Logic design for IoT Devices using Transistor-level Optimization</strong>: The primary objective of researching CMOS Logic Design for IoT Devices Using Transistor-Level Optimization is to develop circuits that satisfy the unique requirements of tiny, battery-operated IoT devices while also being high-performing and power-efficient. — <a href="https://dustytamiu-my.sharepoint.com/:w:/g/personal/angel_martinez1_dusty_tamiu_edu/ETOT2y4nw4tPrpl-rUybpwwBiRQQW8PFyVqf5oA9ztdxmA?rtime=rGhLMeMU3kg" target="_blank">link</a></li>
+<li><strong>U-Parking (In-Progress)</strong>: Autonomous Aerial Surveillance for Smart Parking Management</li>
+<li><strong>NeuroFit (In-Progress)</strong>: Artifical Intelligence Workout Planner</li></ul>
+  </section>
+
+  
+  <section><h2>Contact</h2><p>Email: <a href='mailto:rolijr730@gmail.com'>rolijr730@gmail.com</a></p></section>
+
+  <footer><p>Made with 💻 and 🎨 by Rolando Molina Jr.</p></footer>
+</body>
+</html>
