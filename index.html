@@ -6,357 +6,247 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="CE Student & Researcher — Portfolio of Rolando Molina Jr." />
   <meta property="og:title" content="Rolando Molina Jr. — Portfolio" />
-  <meta property="og:description" content="CE Student & Researcher" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/ilorrr/website-/3fb35151c9cd72e87b52a9c9428664740401112c/selfprofedit.jpeg" />
+  <meta property="og:description" content="Computer Engineering Student & Researcher" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/ilorrr/website-/5b875f95aefd17c5753e645a39bfca918911d08b/selfprofedit.jpeg" />
   <meta name="theme-color" content="#000080" />
 
-  <!-- Fonts: keep your Times New Roman look, add Poppins for headings polish -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
   <style>
-   :root{
-  --brand:#000080;            /* navy accent */
-  --bg:#dcd6cc;              /* soft dark beige background */
-  --ink:#11;                /* darker global text */
-  --muted:#2e2e2e;           /* stronger secondary text */
-  --card:#f4eee4;            /* lighter beige cards for contrast */
-  --ring:rgba(0,0,0,.08);
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#1a1a1a;
-    --ink:#f2f2f2;
-    --muted:#cfcfcf;
-    --card:#2b2b2b;
-    --ring:rgba(255,255,255,.1);
-  }
-}
-
-
-    *{ box-sizing: border-box; }
-    body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family: "Times New Roman", Times, serif; line-height:1.6;
-    }
-    .wrap{
-      max-width: 1000px; margin: 40px auto; padding: 0 20px;
-      border:2px solid #ffe5f0; border-radius:12px; background:#fffafc;
-      box-shadow: 0 10px 25px rgba(0,0,0,.05);
-    }
-
-    /* Nav */
-    .nav{
-      display:flex; align-items:center; justify-content:space-between; gap:16px;
-      padding: 16px 18px;
-    }
-    .brand{ font-family: Poppins, "Times New Roman", serif; font-weight:700; letter-spacing:.2px; }
-    .brand span{ color: var(--brand); }
-    .links a{
-      color: var(--ink); text-decoration:none; opacity:.85; margin-left:14px;
-    }
-    .links a:hover{ opacity:1; text-decoration: underline; }
-
-    /* Hero */
-    .hero{
-      display:grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items:center;
-      padding: 28px 18px 10px;
-    }
-    .avatar{
-      width:180px; height:180px; border-radius:16px; border:4px solid var(--brand);
-      background-image:url('https://github.com/ilorrr/website-/blob/5b875f95aefd17c5753e645a39bfca918911d08b/selfprofedit.jpeg');
-      background-size:cover; background-position:center;
-      box-shadow:0 10px 28px var(--ring);
-      justify-self:end;
-    }
-    h1{
-      margin:.2rem 0 .4rem; color: var(--brand);
-      font-family: Poppins, "Times New Roman", serif; font-size: clamp(28px, 5vw, 44px);
-      line-height:1.1;
-    }
-    .tagline{ font-size:18px; color:#333; margin: 0 0 14px; }
-    .actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
-    .btn{
-      display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none;
-      background:var(--brand); color:#fff; font-weight:700;
-      box-shadow:0 8px 24px rgba(0,0,0,.12);
-      transition: transform .15s ease, box-shadow .15s ease;
-      font-family: Poppins, "Times New Roman", serif;
-    }
-    .btn:hover{ transform: translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,.16); }
-    .btn.ghost{ background:transparent; color:var(--brand); border:2px solid var(--brand); box-shadow:none; }
-    .btn.ghost:hover{ background:var(--brand); color:#fff; }
-
-    /* Sections */
-    section{ padding: 0 18px; margin: 26px 0 32px; }
-    .section-title{
-      display:flex; align-items:center; gap:10px; margin-bottom:12px;
-      font-family: Poppins, "Times New Roman", serif;
-    }
-    .dot{ width:10px; height:10px; border-radius:50%; background: var(--brand); }
-    h2{ margin:0; color: var(--brand); }
-    .muted{ color: var(--muted); }
-
-    /* Skills chips */
-    .chips{ display:flex; gap:10px; flex-wrap:wrap; }
-    .chip{
-      display:inline-block; padding:6px 10px; border-radius:999px; background: var(--card);
-      border:1px solid var(--ring); box-shadow: 0 1px 0 var(--ring) inset; font-size: 14px;
-    }
-
-    /* Project grid */
-    .grid{ display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .card{
-      background: var(--card); border:1px solid var(--ring); border-radius:16px; padding:16px 16px 14px;
-      box-shadow: 0 8px 24px var(--ring);
-      transition: transform .15s ease, box-shadow .15s ease, border-color .2s ease;
-    }
-    .card:hover{ transform: translateY(-3px); box-shadow:0 14px 30px var(--ring); border-color: rgba(0,0,0,.12); }
-    .card h3{ margin:0 0 8px; font-size:18px; color: var(--brand); }
-
-    footer{
-      text-align:center; padding: 18px; color: var(--muted); font-size:14px; border-top: 1px solid #ffe5f0;
-    }
-
-    @media (max-width: 820px){
-      .hero{ grid-template-columns: 1fr; }
-      .avatar{ width:140px; height:140px; justify-self:start; }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-
-    <!-- Top Nav -->
-    <div class="nav">
-      <div class="brand">Rolando<span>.</span></div>
-      <div class="links">
-        <!-- Add these when ready:
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
-        -->
-      </div>
-    </div>
-
-    <!-- Hero -->
-    <header class="hero">
-      <div>
-        <h1>Rolando Molina Jr.</h1>
-        <p class="tagline">CE Student &amp; Researcher</p>
-        <div class="actions">
-          <a class="btn" href="mailto:rolijr730@gmail.com">Email me</a>
-          <a class="btn ghost" href="#projects">View projects</a>
-          <a class="btn ghost" href="#skills">Skills</a>
-        </div>
-      </div>
-      <div class="avatar" aria-label="Profile photo"></div>
-    </header>
-
-    <!-- About -->
-    <section id="about">
-      <div class="section-title"><span class="dot"></span><h2>About</h2></div>
-      <p>
-        A computer engineering undergraduate with a pursuit in the technology field with a firm basis in academic record as a university and transfer student with practical experience with programming and hardware aspects. I'm seeking an internship, entry-level position, or full-time role where I could leverage my engineering learning experience and grow upon it.
-      </p>
-      <p class="muted"><strong>Languages:</strong> English, Spanish</p>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <div class="section-title"><span class="dot"></span><h2>Skills</h2></div>
-      <div class="chips">
-        <span class="chip">C++</span>
-        <span class="chip">Python</span>
-        <span class="chip">HTML</span>
-        <span class="chip">AI</span>
-        <span class="chip">Machine Learning</span>
-        <span class="chip">Agile</span>
-        <span class="chip">Electrical Soldering</span>
-        <span class="chip">OrCAD PSpice</span>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <div class="section-title"><span class="dot"></span><h2>Projects</h2></div>
-      <div class="grid">
-        <article class="card">
-          <h3>CMOS Logic Design for IoT Devices using Transistor-Level Optimization</h3>
-          <p>Research focused on developing high-performance, power-efficient CMOS circuits tailored for small, battery-powered IoT devices.</p>
-          <a class="btn ghost" href="https://dustytamiu-my.sharepoint.com/:w:/g/personal/angel_martinez1_dusty_tamiu_edu/ETOT2y4nw4tPrpl-rUybpwwBiRQQW8PFyVqf5oA9ztdxmA?rtime=rGhLMeMU3kg" target="_blank" rel="noopener">View Paper ↗</a>
-        </article>
-
-        <article class="card">
-          <h3>U-Parking (In-Progress)</h3>
-          <p>Autonomous Aerial Surveillance for Smart Parking Management.</p>
-        </article>
-
-        <article class="card">
-          <h3>NeuroFit (In-Progress)</h3>
-          <p>Artificial Intelligence Workout Planner.</p>
-        </article>
-      </div>
-    </section>
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Rolando Molina Jr. — Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="CE Student & Researcher — Portfolio of Rolando Molina Jr." />
-  <meta property="og:title" content="Rolando Molina Jr. — Portfolio" />
-  <meta property="og:description" content="CE Student & Researcher" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/ilorrr/website-/3fb35151c9cd72e87b52a9c9428664740401112c/selfprofedit.jpeg" />
-  <meta name="theme-color" content="#000080" />
-
-  <!-- Fonts: keep your Times New Roman look, add Poppins for headings polish -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-  <style>
+    /* ------------------ COLOR THEME ------------------ */
     :root{
-      --brand:#000080;
-      --bg:#dcd6cc;
-      --ink:#111;
-      --muted:#666;
-      --card:#f4eee4;
+      --brand:#000080;       /* Navy */
+      --bg:#dcd6cc;          /* Dark beige background */
+      --ink:#111;            /* Strong text */
+      --muted:#2e2e2e;       /* Secondary text */
+      --card:#f4eee4;        /* Lighter beige for cards */
       --ring:rgba(0,0,0,.08);
     }
     @media (prefers-color-scheme: dark){
       :root{
-        --bg:#101218; --ink:#f2f4f8; --muted:#9aa3b2; --card:#161a22; --ring:rgba(255,255,255,.08);
+        --bg:#121212;
+        --ink:#f2f2f2;
+        --muted:#cfcfcf;
+        --card:#1e1e1e;
+        --ring:rgba(255,255,255,.1);
       }
     }
 
-    *{ box-sizing: border-box; }
+    *{ box-sizing: border-box; margin:0; padding:0; }
+
+    /* ------------------ BODY + CONTAINER ------------------ */
     body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family: "Times New Roman", Times, serif; line-height:1.6;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Times New Roman", Times, serif;
+      line-height: 1.6;
     }
     .wrap{
-      max-width: 1000px; margin: 40px auto; padding: 0 20px;
-      border:2px solid #ffe5f0; border-radius:12px; background:#fffafc;
-      box-shadow: 0 10px 30px rgba(0,0,0,.03);
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px 24px;
+      background: var(--card);
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      border: 2px solid #cbbfae;
     }
 
-    /* Nav */
+    /* ------------------ NAV ------------------ */
     .nav{
-      display:flex; align-items:center; justify-content:space-between; gap:16px;
-      padding: 16px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding-bottom: 10px;
     }
-    .brand{ font-family: Poppins, "Times New Roman", serif; font-weight:700; letter-spacing:.2px; }
-    .brand span{ color: var(--brand); }
+    .brand{
+      font-family: Poppins, "Times New Roman", serif;
+      font-weight:700;
+      letter-spacing: .3px;
+      color: var(--brand);
+    }
     .links a{
-      color: var(--ink); text-decoration:none; opacity:.85; margin-left:14px;
+      color: var(--ink);
+      text-decoration: none;
+      margin-left: 16px;
+      font-weight: 600;
     }
-    .links a:hover{ opacity:1; text-decoration: underline; }
+    .links a:hover{
+      color: var(--brand);
+      text-decoration: underline;
+    }
 
-    /* Hero */
+    /* ------------------ HERO ------------------ */
     .hero{
-      display:grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items:center;
-      padding: 28px 18px 10px;
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 28px;
+      align-items:center;
+      margin-top: 20px;
     }
     .avatar{
-      width:180px; height:180px; border-radius:16px; border:4px solid var(--brand);
-      background-image:url('https://raw.githubusercontent.com/ilorrr/website-/3fb35151c9cd72e87b52a9c9428664740401112c/selfprofedit.jpeg');
-      background-size:cover; background-position:center;
-      box-shadow:0 10px 28px var(--ring);
-      justify-self:end;
+      width: 180px;
+      height: 180px;
+      border-radius: 16px;
+      border: 4px solid var(--brand);
+      background-image: url('https://raw.githubusercontent.com/ilorrr/website-/5b875f95aefd17c5753e645a39bfca918911d08b/selfprofedit.jpeg');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      justify-self: end;
     }
     h1{
-      margin:.2rem 0 .4rem; color: var(--brand);
-      font-family: Poppins, "Times New Roman", serif; font-size: clamp(28px, 5vw, 44px);
-      line-height:1.1;
+      font-family: Poppins, "Times New Roman", serif;
+      font-size: clamp(28px, 5vw, 44px);
+      color: var(--brand);
+      margin-bottom: 8px;
     }
-    .tagline{ font-size:18px; color:#333; margin: 0 0 14px; }
-    .actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+    .tagline{
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap: wrap;
+    }
     .btn{
-      display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none;
-      background:var(--brand); color:#fff; font-weight:700;
-      box-shadow:0 8px 24px rgba(0,0,0,.12);
-      transition: transform .15s ease, box-shadow .15s ease;
-      font-family: Poppins, "Times New Roman", serif;
+      background: var(--brand);
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      padding: 10px 14px;
+      font-weight: bold;
+      box-shadow: 0 6px 15px rgba(0,0,0,.2);
+      transition: all 0.15s ease;
     }
-    .btn:hover{ transform: translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,.16); }
-    .btn.ghost{ background:transparent; color:var(--brand); border:2px solid var(--brand); box-shadow:none; }
-    .btn.ghost:hover{ background:var(--brand); color:#fff; }
-
-    /* Sections */
-    section{ padding: 0 18px; margin: 26px 0 32px; }
-    .section-title{
-      display:flex; align-items:center; gap:10px; margin-bottom:12px;
-      font-family: Poppins, "Times New Roman", serif;
+    .btn:hover{
+      background: #0000aa;
+      transform: translateY(-2px);
     }
-    .dot{ width:10px; height:10px; border-radius:50%; background: var(--brand); }
-    h2{ margin:0; color: var(--brand); }
-    .muted{ color: var(--muted); }
+    .btn.ghost{
+      background: transparent;
+      border: 2px solid var(--brand);
+      color: var(--brand);
+    }
+    .btn.ghost:hover{
+      background: var(--brand);
+      color: #fff;
+    }
 
-    /* Skills chips */
-    .chips{ display:flex; gap:10px; flex-wrap:wrap; }
+    /* ------------------ SECTIONS ------------------ */
+    section{
+      margin-top: 40px;
+    }
+    h2{
+      color: var(--brand);
+      font-family: Poppins, "Times New Roman", serif;
+      margin-bottom: 12px;
+    }
+    p{
+      color: var(--ink);
+    }
+    .muted{
+      color: var(--muted);
+    }
+
+    /* ------------------ SKILLS ------------------ */
+    .chips{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+    }
     .chip{
-      display:inline-block; padding:6px 10px; border-radius:999px; background: var(--card);
-      border:1px solid var(--ring); box-shadow: 0 1px 0 var(--ring) inset; font-size: 14px;
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:999px;
+      background: var(--bg);
+      border:1px solid #bfb6a6;
+      color:#111;
+      font-size:14px;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
     }
 
-    /* Project grid */
-    .grid{ display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    /* ------------------ PROJECTS ------------------ */
+    .grid{
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
     .card{
-      background: var(--card); border:1px solid var(--ring); border-radius:16px; padding:16px 16px 14px;
-      box-shadow: 0 8px 24px var(--ring);
-      transition: transform .15s ease, box-shadow .15s ease, border-color .2s ease;
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 16px;
+      padding: 16px 16px 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,.15);
+      transition: transform .15s ease, box-shadow .15s ease;
+      border: 1px solid rgba(0,0,0,.1);
     }
-    .card:hover{ transform: translateY(-3px); box-shadow:0 14px 30px var(--ring); border-color: rgba(0,0,0,.12); }
-    .card h3{ margin:0 0 8px; font-size:18px; color: var(--brand); }
+    .card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0,0,0,.25);
+    }
+    .card h3{
+      margin: 0 0 8px;
+      color: var(--brand);
+      font-family: Poppins, "Times New Roman", serif;
+      font-size: 18px;
+    }
 
+    /* ------------------ FOOTER ------------------ */
     footer{
-      text-align:center; padding: 18px; color: var(--muted); font-size:14px; border-top: 1px solid #ffe5f0;
+      text-align:center;
+      color: var(--muted);
+      margin-top: 40px;
+      padding-top: 20px;
+      font-size: 14px;
+      border-top: 1px solid #bfb6a6;
     }
 
     @media (max-width: 820px){
       .hero{ grid-template-columns: 1fr; }
-      .avatar{ width:140px; height:140px; justify-self:start; }
+      .avatar{ justify-self: start; width:140px; height:140px; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-
-    <!-- Top Nav -->
+    <!-- NAV -->
     <div class="nav">
       <div class="brand">Rolando<span>.</span></div>
       <div class="links">
-        <!-- Add these when ready:
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
-        -->
+        <!-- Add these later -->
+        <!-- <a href="https://github.com/ilorrr" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a> -->
       </div>
     </div>
 
-    <!-- Hero -->
+    <!-- HERO -->
     <header class="hero">
       <div>
         <h1>Rolando Molina Jr.</h1>
-        <p class="tagline">CE Student &amp; Researcher</p>
+        <p class="tagline">CE Student & Researcher</p>
         <div class="actions">
           <a class="btn" href="mailto:rolijr730@gmail.com">Email me</a>
           <a class="btn ghost" href="#projects">View projects</a>
           <a class="btn ghost" href="#skills">Skills</a>
         </div>
       </div>
-      <div class="avatar" aria-label="Profile photo"></div>
+      <div class="avatar"></div>
     </header>
 
-    <!-- About -->
+    <!-- ABOUT -->
     <section id="about">
-      <div class="section-title"><span class="dot"></span><h2>About</h2></div>
+      <h2>About</h2>
       <p>
         A computer engineering undergraduate with a pursuit in the technology field with a firm basis in academic record as a university and transfer student with practical experience with programming and hardware aspects. I'm seeking an internship, entry-level position, or full-time role where I could leverage my engineering learning experience and grow upon it.
       </p>
       <p class="muted"><strong>Languages:</strong> English, Spanish</p>
     </section>
 
-    <!-- Skills -->
+    <!-- SKILLS -->
     <section id="skills">
-      <div class="section-title"><span class="dot"></span><h2>Skills</h2></div>
+      <h2>Skills</h2>
       <div class="chips">
         <span class="chip">C++</span>
         <span class="chip">Python</span>
@@ -369,9 +259,9 @@
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- PROJECTS -->
     <section id="projects">
-      <div class="section-title"><span class="dot"></span><h2>Projects</h2></div>
+      <h2>Projects</h2>
       <div class="grid">
         <article class="card">
           <h3>CMOS Logic Design for IoT Devices using Transistor-Level Optimization</h3>
@@ -391,21 +281,11 @@
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact">
-      <div class="section-title"><span class="dot"></span><h2>Contact</h2></div>
+      <h2>Contact</h2>
       <p>Reach me at <a href="mailto:rolijr730@gmail.com">rolijr730@gmail.com</a></p>
-      <p>Reach me as well (956) 898 - 1329 </p>
-    </section>
-
-    <footer>© Rolando Molina Jr. — Built with 💻 + 🎨</footer>
-  </div>
-</body>
-</html>
-
-    <section id="contact">
-      <div class="section-title"><span class="dot"></span><h2>Contact</h2></div>
-      <p>Reach me at <a href="mailto:rolijr730@gmail.com">rolijr730@gmail.com</a></p>
+      <p class="muted">Phone: (956) 898-1329</p>
     </section>
 
     <footer>© Rolando Molina Jr. — Built with 💻 + 🎨</footer>
