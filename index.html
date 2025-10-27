@@ -178,25 +178,28 @@
       gap: 18px;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
-    .card{
-      background: var(--card);
-      color: var(--ink);
-      border-radius: 16px;
-      padding: 16px 16px 20px;
-      box-shadow: 0 6px 15px rgba(0,0,0,.15);
-      transition: transform .15s ease, box-shadow .15s ease;
-      border: 1px solid rgba(0,0,0,.1);
-    }
-    .card:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 12px 24px rgba(0,0,0,.25);
-    }
-    .card h3{
-      margin: 0 0 8px;
-      color: var(--brand);
-      font-family: Poppins, "Times New Roman", serif;
-      font-size: 18px;
-    }
+    /* --- Fix card spacing & CTA placement --- */
+.card{
+  display: flex;               /* stack content vertically */
+  flex-direction: column;
+  gap: 12px;                   /* space between title, text, and button */
+  min-height: 260px;           /* optional: keeps cards equal height on desktop */
+}
+
+.card h3{ margin-top: 0; }
+.card p{ margin: 0 0 8px; line-height: 1.55; }
+
+/* Push the CTA to the bottom and keep it off edges */
+.card .btn{
+  margin-top: auto;            /* button sticks to bottom of the card */
+  align-self: flex-start;      /* keep button left-aligned */
+}
+
+/* Small screens: remove the fixed min-height so cards can shrink naturally */
+@media (max-width: 720px){
+  .card{ min-height: unset; }
+}
+
 
     /* ------------------ FOOTER ------------------ */
     footer{
@@ -218,7 +221,7 @@
   <div class="wrap">
     <!-- NAV -->
     <div class="nav">
-      <div class="brand">Rolando<span>.</span></div>
+      <div class="brand"> Computer Engineer <span>.</span></div>
     </div>
 
     <!-- HERO -->
